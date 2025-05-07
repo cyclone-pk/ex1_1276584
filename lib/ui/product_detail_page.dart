@@ -19,12 +19,13 @@ class ProductDetailPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Product Image
-          AspectRatio(
-            aspectRatio: 1,
+          SizedBox(
+            height: MediaQuery.of(context).size.height / 2,
+            width: double.infinity,
             child: Image.network(
               product.imageUrl,
               width: double.infinity,
-              fit: BoxFit.cover,
+              fit: BoxFit.contain,
             ),
           ),
 
